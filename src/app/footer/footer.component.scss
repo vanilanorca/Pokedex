@@ -1,0 +1,52 @@
+footer{
+    position: fixed;
+    bottom: 0;
+    background: white;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    
+
+    div:nth-child(1){
+        display: flex;
+        gap: 40px;
+        align-items: center;
+
+        img{
+            max-width: 120px;
+        }
+    }
+
+    .icon{
+        max-width: 39px;
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: 690px){
+    footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 490px){
+    footer{
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    div:nth-child(1){
+        flex-direction: column;
+        gap: 5px!important;
+
+        img{
+            max-width: 80px!important;
+        }
+    }
+}

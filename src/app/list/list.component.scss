@@ -1,0 +1,29 @@
+
+.pokemon-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding-top: 30px;
+
+    mat-card {
+        width: 80%;
+        max-width: 400px;
+        border: 5px solid #006DB9;
+        background: white;
+        border-radius: 15px;
+        transition: all .2s;
+
+        mat-card-title-group{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            font-size: 20px;
+        }
+    }
+
+    mat-card:hover{
+        transform: scale(1.05);
+    }
+}

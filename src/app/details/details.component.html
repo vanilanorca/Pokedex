@@ -1,0 +1,36 @@
+<app-loading-page *ngIf="loadingScreen"></app-loading-page>
+
+<div *ngIf="!loadingScreen" class="container">
+    <a routerLink="/home" class="back"></a>
+    <div class="pokemon-block">
+        <div class="title-block">
+            <span>
+                <img [style.opacity]="this.showImg ? '1' : '0'" src="{{this.pokemon.sprites.normal}}" alt=""
+                    id="shortImage">
+                <h2 id="pokemonName" (mouseover)="this.showImg = true" (mouseleave)="this.showImg = false">
+                    {{this.pokemon.name}}</h2>
+            </span>
+    
+            <img class="bigImage" src="{{this.pokemon.sprites.large}}" alt="">
+        </div>
+    
+        <div class="pokemon-status">
+            <ul>
+                <li id="type"><img src="{{this.pokemon.sprites.animated}}"> Type: {{this.pokemon.type}}</li>
+                <li id="total"><img src="{{this.pokemon.sprites.animated}}"> Total: {{this.pokemon.total}}</li>
+                <li id="hp"><img src="{{this.pokemon.sprites.animated}}"> HP: {{this.pokemon.hp}}</li>
+                <li id="attack"><img src="{{this.pokemon.sprites.animated}}"> Attack: {{this.pokemon.attack}}</li>
+            </ul>
+    
+            <ul>
+                <li id="defense"><img src="{{this.pokemon.sprites.animated}}">Defense: {{this.pokemon.defense}}</li>
+                <li id="sp_attck"><img src="{{this.pokemon.sprites.animated}}">Special Attack: {{this.pokemon.sp_attck}}
+                </li>
+                <li id="sp_def"><img src="{{this.pokemon.sprites.animated}}">Special Defense: {{this.pokemon.sp_def}}</li>
+                <li id="speed"><img src="{{this.pokemon.sprites.animated}}">Speed: {{this.pokemon.speed}}</li>
+            </ul>
+        </div>
+    
+        <i class="fa-solid fa-star" id="favoriteStar"></i>
+    </div>
+</div>

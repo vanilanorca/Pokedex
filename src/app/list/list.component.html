@@ -1,0 +1,22 @@
+<app-loading-page *ngIf="loadingScreen"></app-loading-page>
+
+<div *ngIf="!loadingScreen">
+    <app-header></app-header>
+    <app-actions (changeList)="reloadList($event)"></app-actions>
+
+    <div class="container">
+        <div *ngIf="!loadingFilter" class="pokemon-list">
+
+            <mat-card *ngFor="let pokemon of pokemonsArr">
+                <mat-card-title-group (click)="openDetail(pokemon)">
+                    <mat-card-title>{{pokemon.name}}</mat-card-title>
+                    <img mat-card-sm-image src="{{pokemon.sprites.large}}"
+                        onerror="this.src='../assets/imgs/pokebola.png';">
+                </mat-card-title-group>
+            </mat-card>
+
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+</div>
