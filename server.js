@@ -3,10 +3,10 @@ const app = express();
 
 const PORT = process.env.PORT || 8080;
 
-app.use(express.static(__dirname + "/dist/synvia-pokedex"));
+app.use(express.static(__dirname + "dist/Synvia-Pokedex"));
 
 app.get("*/", (req, res) => {
-  res.sendFile(__dirname, "/dist/synvia-pokedex/index.html");
+  res.sendFile(__dirname, "dist/Synvia-Pokedex/index.html");
 });
 
 app.listen(PORT, () => {
